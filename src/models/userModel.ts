@@ -34,7 +34,7 @@ export async function getAllProduto():Promise<Produto[]>{
 Para cadastrar um usuário será necessário passar o usuário por parâmetro e , ele
 será gerenciado pelo seu id
 */
-export async function createProduto(Produto: Omit<Produto, 'id'>): Promise<ResultSetHeader> {
+export async function createProduto(produto: Omit<Produto, 'id'>): Promise<ResultSetHeader> {
      try {
         /*
         Vamos usar o comando insert para cadastrar o usuário
@@ -46,7 +46,7 @@ export async function createProduto(Produto: Omit<Produto, 'id'>): Promise<Resul
         */
     const [result] = await pool.execute<ResultSetHeader>(
     'INSERT INTO Produto (nomeProduto, fabricante, descricao, preco) VALUES (?, ?, ?, ?)',
-     [Produto.nomeProduto, Produto.fabricante, Produto.descricao, Produto.preco]
+     [produto.nomeProduto, produto.fabricante, produto.descricao, produto.preco]
     );
      return result;
      } catch (error) {
@@ -56,11 +56,11 @@ export async function createProduto(Produto: Omit<Produto, 'id'>): Promise<Resul
      }
 
      // Função para atualizar um usuário existente
-export async function updateProduto(id: number, Produto: Omit<Produto, 'id'>): Promise<ResultSetHeader> {
+export async function updateProduto(id: number, produto: Omit<Produto, 'id'>): Promise<ResultSetHeader> {
     try {
      const [result] = await pool.execute<ResultSetHeader>(
      'UPDATE Produto SET nomeProduto = ?, fabricante = ?, descricao =?,preco =?,  WHERE id = ?',
-     [Produto.nomeProduto, Produto.fabricante, Produto.descricao, Produto.preco, id]
+     [produto.nomeProduto, produto.fabricante, produto.descricao, produto.preco, id]
 
      );
      return result;
