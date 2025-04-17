@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <!--Início da barra de navegação-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " id="home" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="cadastrar" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar</a>
+
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<!--Fim da barra de navegação-->
+<h2>Produtos cadastrados</h2>
+
+<div class="container row">
+
+  </div>
+
+
+<!--Inicio do modal-->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar produto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- nome do produto -->
+            <div class="mb-3">
+                <label for="txtNome" class="form-label">Nome do produto</label>
+                <input type="text" class="form-control" id="txtNome" placeholder="Nome">
+              </div>
+            <!-- fabricante -->
+              <div class="mb-3">
+                <label for="txtFabricante" class="form-label">Fabricante</label>
+                <input type="text" class="form-control" id="txtFabricante" placeholder="Fabricante">
+              </div>
+              <!-- descrição -->
+              <div class="mb-3">
+                <label for="txtDescricao" class="form-label">Descrição</label>
+                <input type="text" class="form-control" id="txtDescricao" placeholder="Descrição">
+              </div>
+              <!-- preço -->
+              <div class="mb-3">
+                <label for="txtPreco" class="form-label">Preço</label>
+                <input type="text" class="form-control" id="txtPreco" placeholder="Preço">
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" id="btnCadastrar">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Fim do modal-->
+
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
